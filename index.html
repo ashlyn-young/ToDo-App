@@ -13,25 +13,29 @@
     <div class="outer">
         <nav class="navbar">
           <!-- navbar not needed but looks cool -->
-          <a>
-            <input id="makeNewTask" type="text" placeholder="New task">
-            <button onclick="newTask">Add task</button> 
-          </a>
           <a>todoooooooo</a>
         </nav>
        
         <div class="container-fluid">
           <div class="row">
             <div class="col-3">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Name your todo list" aria-label="Name your todo list" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" onclick="addTodo">Add List</button>
+                </div>
+              </div>
                 Just to see
               <!-- list of todo lists go here -->
             </div>
        
             <div class="col-9">
-                <ul>
-                    <li>just to see</li>
-                    <li>just to see</li>
-                </ul>
+              <ul class="list-group" alt="Task with listed steps">
+                <li class="list-group-flush">Testing</li>
+                <li class="list-group-flush">These are potential to do lists</li>
+                <li class="list-group-flush">more to dos</li>
+                <li class="list-group-item"></li>
+              </ul>
                 
               <!-- current todo list name goes here -->
               <!-- current todo list goes here -->

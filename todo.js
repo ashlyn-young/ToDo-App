@@ -3,14 +3,22 @@ const lists = {
     2 : {name: "Grocery List", todos:[{text: 'task1', completed: false}, {text: 'task2', completed: false}]}
 }
 
-// function newTask(input) {
-//     let task = document.getElementById("makeNewTask");
 
-// }
+const currentList = {
+  name: 'Shopping list',
+  todos: [
+    {
+      text: 'the will to live',
+      completed: false
+    },
+    {
+      text: 'fucks to give',
+      completed: false
+    }
+  ]
+}
 
-
-
-/*function render() {
+function render() {
     // this will hold the html that will be displayed in the sidebar
     let listsHtml = '<ul class="list-group">';
     // iterate through the lists to get their names
@@ -33,6 +41,20 @@ const lists = {
     });
     // print out the todos
     document.getElementById('current-list-todos').innerHTML = todosHtml;
-   }*/
+   }
+
+
+function addTodo() {
+  const text = document.getElementById('form-control').ariaValueMax;
+  if(text) {
+    currentList.todos.push({
+      text: text,
+      completed: false
+    })
+    render();
+  }
+}
+
+
 
    
