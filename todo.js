@@ -20,10 +20,10 @@ const currentList = {
 
 function render() {
     // this will hold the html that will be displayed in the sidebar
-    let listsHtml = '<ul class="list-group">';
+    let listsHtml = '<ul class="list-group-flush">';
     // iterate through the lists to get their names
     lists.forEach((list) => {
-      listsHtml += `<li class="list-group-item">${list.name}</li>`;
+      listsHtml += `<li class="list-group-flush">${list.name}</li>`;
     });
    
     listsHtml += '</ul>';
@@ -37,7 +37,7 @@ function render() {
    
     let todosHtml = '<ul class="list-group-flush">';
     currentList.todos.forEach((list) => {
-      todosHtml += `<li class="list-group-item">${todo.text}</li>`;
+      todosHtml += `<li class="list-group-flush">${todo.text}</li>`;
     });
     // print out the todos
     document.getElementById('current-list-todos').innerHTML = todosHtml;
@@ -45,7 +45,7 @@ function render() {
 
 
 function addTodo() {
-  const text = document.getElementById('form-control').ariaValueMax;
+  const text = document.getElementById('input').value;
   if(text) {
     currentList.todos.push({
       text: text,
