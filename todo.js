@@ -22,10 +22,14 @@ function render() {
     // this will hold the html that will be displayed in the sidebar
     let listsHtml = '<ul class="list-group-flush">';
     // iterate through the lists to get their names
-    lists.forEach((list) => {
+    // lists.forEach((list) => {
+    //   listsHtml += `<li class="list-group-flush">${list.name}</li>`;
+    // });
+    for (let i = 0; i < lists.length; i++) {
       listsHtml += `<li class="list-group-flush">${list.name}</li>`;
-    });
-   
+    };
+
+
     listsHtml += '</ul>';
     // print out the lists
    
@@ -36,11 +40,17 @@ function render() {
     // iterate over the todos in the current list
    
     let todosHtml = '<ul class="list-group-flush">';
+
+    // for (let i = 0; i < currentList; i++) {
+    //   todosHtml += `<li class="list-group-flush">${todo.text}</li>`;
+    // }
+
     currentList.todos.forEach((list) => {
       todosHtml += `<li class="list-group-flush">${todo.text}</li>`;
     });
     // print out the todos
     document.getElementById('current-list-todos').innerHTML = todosHtml;
+    
    }
 
 
