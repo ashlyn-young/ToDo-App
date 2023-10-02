@@ -2,54 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="todo.js"></script>
+    <script src="https://kit.fontawesome.com/18c60e01d0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
 </head>
 <body>
-    <div class="outer">
-        <nav class="navbar">
-          <!-- navbar not needed but looks cool -->
-          <a>todoooooooo</a>
-        </nav>
-       
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-3">
-              <div class="input-group mb-3">
-                <input id="input" type="text" class="form-control" placeholder="Name your todo list"/>
-                <div class="input-group-append">
-                  <button class="btn btn-outline-secondary" type="button" onclick="addTodo()">Add List</button>
-                </div>
-              </div>
-                Just to see
-              <!-- list of todo lists go here -->
-            </div>
-       
-            <div class="col-9">
-              <ul class="list-group" alt="Task with listed steps">
-                <li class="list-group-flush">Testing</li>
-                <li class="list-group-flush">These are potential to do lists</li>
-                <li class="list-group-flush">more to dos</li>
+    <div class="container">
+        <div class="todo-app">
+            <h2>To-Do List <i class="fa-solid fa-square-check"></i></h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="add your text">
+                <button>Add</button>
 
-                <li class="list-group-flush" id="currentList"></li>
-                <!-- <li class="list-group-item"></li> -->
-              </ul>
-                
-              <!-- current todo list name goes here -->
-              <!-- current todo list goes here -->
             </div>
-       
-          </div>
+            <ul id="listContainer">
+                <li>Task 1</li>
+                <li>Task 1</li>
+                <li>Task 1</li>
+            </ul>
         </div>
+         wanting to add shit
+
+    <i class="fa-regular fa-square-check"></i>
+    <i class="fa-solid fa-square-check"></i>
+    <i class="fa-solid fa-circle-xmark"></i>
+    <i class="fa-regular fa-circle-xmark"></i>
+
     </div>
-<!--     
-    <div class="input">
-        <input id="makeNewTask" type="text" placeholder="New task">
-        <button onclick="newTask">Add task</button> 
-    </div> -->
+   
 </body>
 </html>
