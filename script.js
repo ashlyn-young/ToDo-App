@@ -1,5 +1,5 @@
 
-// const listContainer = document.getElementById("list-container");
+const listContainer = document.getElementById("listContainer");
 function addTask(){
     if(document.getElementById("input-box").value === ''){
         alert("You need to write a name for your to-do!");
@@ -13,20 +13,33 @@ function addTask(){
         li.appendChild(span)
     }
     document.getElementById("input-box").value = '';
-    console.log(document.getElementById("listContainer"))
+    saveData();
+
 
 }
 
 document.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
+        saveData()
     }
     else if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
+        saveData()
     }
 }, false);
 
+function saveData(){
+    localStorage.setItem("data", listContainer.innerHTML);
+}
 
-
+function showData(){
+    const listContainer = document.getElementById("listContainer");
+    // const storedData = localStorage.getItem("data");
+    if (localStorage.getItem("data")) {
+        listContainer.innerHTML = localStorage.getItem("data");
+    }
+}
+showData()
 
 
