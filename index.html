@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/18c60e01d0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
@@ -12,22 +13,23 @@
         <div class="todo-app">
             <h2>To-Do List <i class="fa-solid fa-square-check"></i></h2>
             <div class="row">
-                <input type="text" id="input-box" placeholder="add your text">
-                <button>Add</button>
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button onclick="addTask()">Add</button>
 
             </div>
             <ul id="listContainer">
+              
               <div>
-                <i class="fa-regular fa-square-check"></i>
-                <li>Task 1</li>
+                <li class="checked">
+                  Task 1</li>
               </div>
               <div>
-                <i class="fa-regular fa-square-check"></i>
-                <li>Task 1</li>
+                <li>
+                  Task 1</li>
               </div>
               <div>
-                <i class="fa-regular fa-square-check"></i>
-                <li>Task 1</li>
+                <li>
+                  Task 1</li>
               </div>
             </ul>
         </div>
